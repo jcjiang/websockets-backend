@@ -62,7 +62,7 @@ io.on('connection', (socket) => {
   // / on deleteNote do what is needful
   socket.on('deleteNote', (id) => {
     // you can do it
-    Notes.findByIdAndRemove(id).then(() => {
+    Notes.deleteNote(id).then(() => {
       pushNotes();
     });
   });
